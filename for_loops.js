@@ -1,5 +1,5 @@
 console.log("Tutorial 3");
-console.log("Loops in Js");
+console.log("For Loops in Js");
 
 //we use loops for performing repititive tasks
 let n = 50;
