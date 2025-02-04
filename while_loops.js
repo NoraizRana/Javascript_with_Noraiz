@@ -13,4 +13,5 @@ let n=1;
 do{
  console.log(sales+n);
 }while(n<1);
+//ask me if you have any querry
 
