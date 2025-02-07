@@ -1,5 +1,5 @@
 console.log("Tutorial 6");
-console.log("Practice of datatypes, loops, conditional statements, functions, objects,");
+console.log("Practice of datatypes, loops, conditional statements,  objects,");
 // In this tutorial we will practice the topics that we studied previous
 
 /* Q1
