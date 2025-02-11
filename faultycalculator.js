@@ -1,3 +1,5 @@
+console.log("Tutorial 9");
+console.log("In this tutoruial we will make a faulty calculator using conditiuonal expressions");
 /*Make a faulty calculator which gives the wrong answer 10% of the time of the total answersit will perform following wrong calculationds.*/
 let wrong = {
     '+': '*',
