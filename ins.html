@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container green air">
+        <div class="box red">
+            Hello from Box
+        </div>
+    </div>
+    <script>
+        let div=document.createElement("div");
+        div.innerHTML="I am inserted by GURU";
+        document.querySelector(".container").append(div); //before after etc
+        GET
+http://127.0.0.1:5500/favicon.ico
+[HTTP/1.1 404 Not Found 0ms]
+
+document.querySelector(".container").classList
+DOMTokenList(3) [ "container", "green", "air" ]
+
+document.querySelector(".container").className
+"container green air"
+document.querySelector(".container").classList.add("yolo")
+undefined
+document.querySelector(".container").classList
+DOMTokenList(4) [ "container", "green", "air", "yolo" ]
+
+document.querySelector(".container").classList.remove("air")
+undefined
+
+document.querySelector(".container").className
+
+"container green yolo"
+        document.querySelector(".box").classList.toggle("red")
+false
+document.querySelector(".box").classList.toggle("red")
+true 
+
+    </script>
+</body>
+</html>

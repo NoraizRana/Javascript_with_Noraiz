@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="one" class="box">
+            hey I am a box
+        </div>
+    </div>
+    <script>
+        // document.querySelector(".box").innerHTML="Hi Box";
+        // document.querySelector(".box").outerHTML="Huuuu Box";
+        // document.getElementById("one").innerHTML = "Huuu";
+        document.querySelector(".container").tagName;
+        document.querySelector(".container").tagName;
+"DIV"
+document.querySelector(".container").nodeName;
+"DIV"
+document.querySelector(".container").nodeType;
+1
+document.querySelector(".container").hidden;
+false
+document.querySelector(".container").hidden=true
+true
+document.querySelector(".container").textContent
+"
+        
+            hey I am a box
+        
+    "
+document.querySelector(".container").hasAttribute("class")
+true
+document.querySelector(".container").hasAttribute("style")
+false
+document.querySelector(".container").setAttribute("style", "display:flex")
+undefined
+document.querySelector(".container").hidden=false
+false
+document.querySelector(".container").setAttribute("style", "display:flex")
+undefined
+document.querySelector(".container").attributes
+NamedNodeMap [ class="container", style="display:flex" ]
+
+document.designMode="on"
+"on" 
+
+    </script>
+
+</body>
+
+</html>
