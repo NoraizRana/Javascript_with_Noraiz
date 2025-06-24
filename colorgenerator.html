@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            font-size: large;
+            font-weight: bold;
+
+        }
+
+        .box {
+            border: 2px solid purple;
+            width: 95px;
+            height: 80px;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Dabba 1</div>
+        <div class="box">Dabba 2</div>
+        <div class="box">Dabba 3</div>
+        <div class="box">Dabba 4</div>
+        <div class="box">Dabba 5</div>
+    </div>
+    <script>
+        let boxes = document.querySelectorAll(".box");
+        console.log(boxes);
+        function getrandomcolor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1},${val2},${val3})`;
+        }
+        Array.from(boxes).forEach(e => {
+            e.style.backgroundColor = getrandomcolor();
+            e.style.color = getrandomcolor();
+
+        })
+    </script>
+
+</body>
+
+</html>
