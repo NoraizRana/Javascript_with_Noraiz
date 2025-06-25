@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener in Js</title>
+</head>
+<style>
+    .grandfather {
+        border: 2px solid black;
+        height: 20vh;
+        display: block;
+        margin: auto;
+        align-content: center;
+    }
+
+    .father {
+        width: 70vw;
+        height: 17vh;
+        border: 2px solid black;
+        margin: auto;
+        align-content: center;
+    }
+
+    .child {
+        width: 50vw;
+        height: 13vh;
+        border: 2px solid black;
+        margin: auto;
+        text-align: center;
+        align-content: center;
+    }
+</style>
+
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="child">I am a child
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let parent = document.querySelector(".grandfather");
+        parent.addEventListener(("click"), (e) => {
+
+            alert("Hey you clicked the grandfather");
+        })
+        document.querySelector(".father").addEventListener(("click"), (e) => {
+            e.stopPropagation()
+            alert("Hey you clicked the father");
+        })
+        document.querySelector(".child").addEventListener(("click"), (e) => {
+            alert("Hey you clicked the child");
+        })
+        function getrandomColor(){
+            val1=Math.ceil(0 + Math.random()*255);
+            val2=Math.ceil(0 + Math.random()*255);
+            val3=Math.ceil(0 + Math.random()*255);
+               return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        setInterval(()=>{
+            document.querySelector(".father").style.backgroundColor=getrandomColor();
+        },2000);
+
+        setTimeout(()=>{
+            document.querySelector(".father").style.backgroundColor=getrandomColor();
+        },3000)
+
+    </script>
+
+</body>
+
+</html>
