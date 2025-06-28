@@ -55,20 +55,22 @@
         document.querySelector(".child").addEventListener(("click"), (e) => {
             alert("Hey you clicked the child");
         })
-        function getrandomColor(){
-            val1=Math.ceil(0 + Math.random()*255);
-            val2=Math.ceil(0 + Math.random()*255);
-            val3=Math.ceil(0 + Math.random()*255);
-               return `rgb(${val1}, ${val2}, ${val3})`
+        function getrandomColor() {
+            val1 = Math.ceil(0 + Math.random() * 255);
+            val2 = Math.ceil(0 + Math.random() * 255);
+            val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
         }
 
-        setInterval(()=>{
-            document.querySelector(".father").style.backgroundColor=getrandomColor();
-        },2000);
+        setInterval(() => {
+            document.querySelector(".father").style.backgroundColor = getrandomColor();
+        }, 2000); 
+        // clearinterval(); clears the setInetrval 
 
         setTimeout(()=>{
             document.querySelector(".father").style.backgroundColor=getrandomColor();
         },3000)
+         // clearTimeout(); clears the setTimeout
 
     </script>
 
