@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await in Js</title>
+</head>
+
+<body>
+
+    <script>
+        // async function getdata() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Hurray!")
+        //         }, 3000)
+        //     })
+        // }
+        async function getdata() {
+            let x = await fetch('https://jsonplaceholder.typicode.com/todos/1') //fetch API
+            let data = x.json();
+            console.log(data);
+        }
+        // console.log("Loading....");
+        // console.log("Getting data...");
+
+        // let x = getdata();
+        // x.then((v) => {
+        //     console.log("data processing...");
+        //     console.log("I am done");
+
+        // });
+        async function main() {
+            console.log("Loading....");
+            console.log("Getting data...");
+            let x = await getdata();
+            console.log(x);
+
+        }
+        main()
+
+    </script>
+</body>
+
+</html>
