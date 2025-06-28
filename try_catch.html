@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling-Try Catch</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter first number");
+        let b = prompt("Enter second number");
+        if (isNaN(a) || isNaN(b)) {
+            throw SyntaxError("Either one or both the entered values are not numbers")
+        }
+        let sum = parseInt(a) + parseInt(b);
+        // let x = 5;
+        function main() {
+            let x=4;
+            try {
+                console.log("The sum of a and b is " + sum * x);
+                return true
+            }
+            catch (error) { //trying to catch the error
+                console.log("O bhaii Errorrrrr.....")
+                return false
+            }
+            //finally statement runs in function even after return value 
+            finally { 
+                console.log("All is done, shutting down everything..")
+            } 
+        }
+        let c=main();
+    </script>
+
+</body>
+
+</html>
