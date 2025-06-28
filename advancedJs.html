@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //IIFE immediately invoked function expression
+        async function sleep() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(34);
+                }, 2000);
+
+            })
+        }
+        (async function main() {
+            let a = await sleep();
+            let b = await sleep();
+            console.log(a);
+            console.log(b);
+
+        })();
+
+        //destructuring in Js
+        // let [x,y,z,...rest] = [12,24,36,23,34,56];
+        // // console.log(arr[0],arr[1],arr[2]);
+        // console.log(x,y,z,rest);
+
+        let arr = [12, 24, 36];
+        function sum(a, b, c) {
+            return a + b + c
+        }
+        console.log(sum(...arr)); //spread operator opens vlaues
+        let obj={
+            a:1,
+            b:2,
+            c:3
+        }
+        let {a,b}=obj //array from objects
+        console.log(a,b); 
+        //object from array
+        let ar=[1,2,3,4,5]
+        let ob={...ar};
+      console.log(ob);
+
+
+    </script>
+</body>
+
+</html>
