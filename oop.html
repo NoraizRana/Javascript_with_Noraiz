@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in Js</title>
+</head>
+
+<body>
+
+    <script>
+        class human {
+            constructor(name) {
+                console.log("Object created for human..")
+                this.name = name;
+            }
+            run() {
+                console.log(this.name + " is running");
+            }
+            sleep() {
+                console.log(this.name + " is sleeping");
+            }
+        };
+        class males extends human{
+            haslonghair(){
+                console.log("if " + this.name + " has long hair then he is not male ")
+            }
+            hasshorthair(){
+                console.log("if " + this.name + " has short hair then he is male ")
+            }
+        }
+        let h = new human("Haider");
+        // h instanceof human
+        // true
+        console.log(h.name);
+        h.run();
+        h.sleep();
+        let m=new males("Ashraf");
+        m.haslonghair();
+        m.sleep();
+    </script>
+</body>
+
+</html>
